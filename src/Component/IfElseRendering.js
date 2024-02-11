@@ -5,31 +5,43 @@ class IfElseRendering extends Component {
         super(props)
 
         this.state = {
-            isLoggedIn: false
+            isLoggedIn: false,
+            name : 'Guest'
         }
     }
+
+    changeCondition = () => {
+        this.setState({isLoggedIn : !this.state.isLoggedIn});
+        this.setName();
+    }
+
+    setName = () => {
+        this.state.isLoggedIn ? this.setState({name : 'Dev'}) : this.setState({name : 'Guest'});
+    }
+
     render() {
 
         return (
-            this.state.isLoggedIn ?
-            <div>Welcome Dev</div> :
-            <div>Welcome guest</div>
+            <div>
+            <div>Welcome {this.state.name}</div>
+            <button onClick={ this.changeCondition}>Change Condition</button>
+            </div>
         )
 
         let message = '';
 
         if (this.state.isLoggedIn) {
-            message =  <div> Welcome Dev </div>            
+            message =  <div> Welcome Dev </div>
         } else {
-            message =  <div>Welcom Guest</div>            
+            message =  <div>Welcom Guest</div>
         }
         return <div>{message}</div>
         // if (this.state.isLoggedIn) {
         //     return  
-        //         <div> Welcome Devq </div>            
+        //         <div> Welcome Devq </div>
         // } else {
         //     return 
-        //         <div>Welcom Guest</div>            
+        //         <div>Welcom Guest</div>
         // }
         // return (
         //   <div>

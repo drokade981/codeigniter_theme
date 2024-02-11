@@ -10,7 +10,7 @@ class EventBind extends Component {
         }
     }
 
-    clickHandler() {
+    clickHandler = () => {
         this.setState({
             message : 'Dev'
         })
