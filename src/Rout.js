@@ -19,6 +19,7 @@ import ListClass from './Component/List/ListClass';
 import ListFunction from './Component/List/ListFunction';
 import UseState from './Component/Hooks/UseState';
 import UseEffect from './Component/Hooks/UseEffect';
+import TestComponent from './Component/TestComponent';
 
 function Rout() {
   return (
@@ -39,13 +40,14 @@ function Rout() {
                     </Nav.Link>
                     </Nav.Item>
                     <Link to="/apple"> Apple</Link>
+                    
                     <NavDropdown title="Rendering" id="basic-nav-dropdown">
                         <NavDropdown.Item ><Link to="/event-bind">Click Action &nbsp;</Link></NavDropdown.Item>
                         <NavDropdown.Item ><Link to="/parent">Parent &nbsp;</Link></NavDropdown.Item>
                         <NavDropdown.Item><Link to="list"> List &nbsp;</Link> </NavDropdown.Item>
                         <NavDropdown.Divider />
-                        <NavDropdown.Item href="#action/3.4">
-                            Separated link
+                        <NavDropdown.Item href="/profile">
+                            Send Data
                         </NavDropdown.Item>
                     </NavDropdown>
                     <NavDropdown title="Condition" id="basic-dropdown">
@@ -84,6 +86,7 @@ function Rout() {
                         <Route path="/list-function" element={<ListFunction />} />
                         <Route path="/use-state" element={<UseState />} />
                         <Route path="/use-effect" element={<UseEffect />} />
+                        <Route path="/profile" element={<TestComponent />} />
                     </Routes>
                 </Router>
     </div>

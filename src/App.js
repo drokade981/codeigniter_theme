@@ -1,8 +1,7 @@
 import React from 'react'
 import logo from './logo.svg';
 import './App.css';
-import Profile from './Profile';
-import ProfileClass from './ProfileClass';
+
 import User from './User';
 
 
@@ -21,8 +20,7 @@ function App() {
         <Menu />
       </header>
         
-        <Profile text={{name:'peter'}} data='Profile Data'/>
-        <ProfileClass text={{name:'peter'}} data='Profile class Data'/>
+        
       <User data={getData}/>
     </div>
   );
